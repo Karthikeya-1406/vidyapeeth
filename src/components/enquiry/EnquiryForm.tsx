@@ -253,7 +253,7 @@ export default function EnquiryForm() {
         />
         <span className="text-xs text-slate-600">
           I hereby consent to receive educational counseling calls, WhatsApp updates, and
-          admission notices from Vidya Peeth Schools. Your information remains strictly
+          admission notices from Vidhyapeeth Karimnagar. Your information remains strictly
           confidential.
         </span>
       </label>

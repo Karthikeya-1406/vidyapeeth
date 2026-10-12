@@ -42,14 +42,14 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-[1360px] items-center justify-between px-6">
         <NavLink to="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
           <span className="flex size-14 shrink-0 items-center justify-center">
-            <img src={logo} alt="Vidhya Peeth High School logo" className="size-full object-contain" />
+            <img src={logo} alt="Vidhyapeeth Karimnagar" className="size-full object-contain" />
           </span>
           <span className="flex flex-col items-start gap-1">
             <span className="font-display text-[20px] leading-none font-extrabold tracking-[-0.5px] text-brand">
-              VIDYA PEETH
+              VIDHYAPEETH
             </span>
-            <span className="pl-1 font-display text-[11px] leading-none font-semibold tracking-[2.75px] text-brand">
-              SCHOOLS
+            <span className="pl-1 font-display text-[11px] leading-none font-semibold tracking-[2.75px] text-accent [-webkit-text-stroke:0.1px_var(--color-brand)]">
+              KARIMNAGAR
             </span>
           </span>
         </NavLink>

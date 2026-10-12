@@ -13,7 +13,7 @@ export default function CtaBanner() {
             Empowering Young Minds with Purpose &amp; Gravity
           </h2>
           <p className="text-base text-[#e7eeff]">
-            Book your personalized counseling session today and discover what makes Vidya Peeth
+            Book your personalized counseling session today and discover what makes Vidhyapeeth
             Schools Karimnagar&rsquo;s foremost institution.
           </p>
         </div>

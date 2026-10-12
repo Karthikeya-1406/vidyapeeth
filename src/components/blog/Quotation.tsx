@@ -15,7 +15,7 @@ export default function Quotation() {
               the moral courage to investigate, the empathy to collaborate, and the passion to build.&rdquo;
             </blockquote>
             <p className="pt-1 text-sm text-slate-500">
-              Published in Vidya Peeth Quarterly Digest • Affiliated to CBSE New Delhi (No. 3630436)
+              Published in Vidhyapeeth Quarterly Digest • Affiliated to CBSE New Delhi (No. 3630436)
             </p>
           </div>
 

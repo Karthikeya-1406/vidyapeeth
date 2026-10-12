@@ -45,7 +45,7 @@ export default function Hero() {
 
         <div className="relative lg:col-span-5">
           <div className="overflow-hidden rounded-2xl bg-[#dfe8ff] shadow-2xl">
-            <img src={heroImage} alt="Vidya Peeth Schools reception" className="h-[240px] w-full object-cover sm:h-[300px]" />
+            <img src={heroImage} alt="Vidhyapeeth Karimnagar reception" className="h-[240px] w-full object-cover sm:h-[300px]" />
           </div>
           <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3 rounded-lg bg-white/95 p-4 shadow-lg backdrop-blur-[6px]">
             <div className="flex items-center gap-2">
@@ -53,7 +53,7 @@ export default function Hero() {
                 🎓
               </span>
               <div className="flex flex-col">
-                <span className="font-display text-lg font-bold text-brand">Vidya Peeth Schools</span>
+                <span className="font-display text-lg font-bold text-brand">Vidhyapeeth Karimnagar</span>
                 <span className="text-xs font-semibold text-slate-500">District Court Road, Jyothinagar</span>
               </div>
             </div>

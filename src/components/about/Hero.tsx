@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="flex items-center gap-2">
             <span className="h-0.5 w-6 bg-accent" />
             <span className="font-display text-xs font-semibold tracking-[1.2px] text-accent-dark uppercase">
-              About Vidya Peeth Schools
+              About Vidhyapeeth Karimnagar
             </span>
           </div>
           <h1 className="font-display text-4xl leading-tight font-bold text-brand sm:text-5xl lg:text-6xl lg:tracking-tight">
@@ -50,14 +50,15 @@ export default function Hero() {
 
         <div className="relative mx-auto w-full max-w-[480px] lg:order-2">
           <div className="relative overflow-hidden rounded-lg border-8 border-white bg-[#d7e3fd] shadow-xl">
-            <img src={heroPrimary} alt="Vidya Peeth students smiling on campus" className="aspect-[4/3] w-full object-cover" />
-            <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 rounded-sm bg-[#001134] px-2 py-1 font-sans text-xs font-semibold tracking-[0.6px] text-white uppercase">
-              Affiliated to CBSE New Delhi
-            </span>
+            <img src={heroPrimary} alt="Vidhyapeeth students smiling on campus" className="aspect-[4/3] w-full object-cover" />
           </div>
           <div className="absolute -bottom-8 left-1/3 aspect-square w-2/5 overflow-hidden rounded-lg border-4 border-white bg-white shadow-2xl">
-            <img src={heroSecondary} alt="Vidya Peeth student in a science lab" className="size-full object-cover" />
+            <img src={heroSecondary} alt="Vidhyapeeth student in a science lab" className="size-full object-cover" />
           </div>
+          {/* Sits outside the photo cards so the overlapping inset photo can't cover it. */}
+          <span className="absolute bottom-6 left-6 z-10 inline-flex items-center gap-1.5 rounded-sm bg-[#001134] px-2 py-1 font-sans text-xs font-semibold tracking-[0.6px] text-white uppercase shadow-lg">
+            Affiliated to CBSE New Delhi
+          </span>
           <span className="absolute -top-4 left-2 inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-1 font-sans text-xs font-semibold text-brand shadow-lg">
             <span className="size-2.5 rounded-full bg-accent" />
             Curiosity &bull; Character &bull; Leadership

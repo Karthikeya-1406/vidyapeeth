@@ -15,7 +15,7 @@ export default function SecondaryStories() {
           </div>
           <p className="max-w-sm text-sm text-slate-600">
             Handpicked dispatches from the sports field, the stage, and the debate hall — three sides of a
-            well-rounded Vidya Peeth education.
+            well-rounded Vidhyapeeth education.
           </p>
         </div>
 

@@ -55,7 +55,7 @@ export default function Pillars() {
         </div>
 
         <div className="relative hidden overflow-hidden rounded-3xl shadow-2xl lg:col-span-2 lg:block">
-          <img src={pillarSide} alt="Vidya Peeth student" className="aspect-3/4 w-full object-cover" />
+          <img src={pillarSide} alt="Vidhyapeeth student" className="aspect-3/4 w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-transparent" />
           <div className="absolute -bottom-4 right-4 flex size-28 flex-col items-center justify-center gap-1 rounded-xl border-2 border-white bg-[#001134] p-2 text-center shadow-2xl">
             <p className="font-sans text-[9px] font-bold tracking-[0.9px] text-white uppercase">

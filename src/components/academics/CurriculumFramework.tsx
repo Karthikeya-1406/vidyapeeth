@@ -13,7 +13,7 @@ const tags = [
 
 export default function CurriculumFramework() {
   return (
-    <section className="bg-[#f9f9ff] px-6 py-16 sm:px-10 lg:px-16 lg:py-24">
+    <section id="curriculum" className="bg-[#f9f9ff] px-6 py-16 sm:px-10 lg:px-16 lg:py-24">
       <div className="mx-auto grid max-w-[1360px] items-center gap-12 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-4">
           <div className="flex items-center gap-2">
@@ -36,18 +36,15 @@ export default function CurriculumFramework() {
           >
             Apply for Admission &rarr;
           </NavLink>
-          <blockquote className="max-w-md border-l-4 border-accent py-2 pl-6">
-            <p className="font-display text-lg text-brand">
-              &ldquo;We replace passive memorisation with experiential inquiry. Students construct
-              their understanding through evidence and debate.&rdquo;
-            </p>
-            <p className="pt-2 text-xs font-semibold text-slate-500">&mdash; Academic Director, Vidya Peeth</p>
-          </blockquote>
+          <p className="max-w-md border-l-4 border-accent py-2 pl-6 font-display text-lg text-brand">
+            Learning begins with better questions. Students are encouraged to frame questions,
+            interpret information and explore different possibilities.
+          </p>
         </div>
 
         <div className="relative mx-auto grid w-full max-w-md grid-cols-2 gap-4">
           <div className="col-span-2 overflow-hidden rounded-2xl border-4 border-white shadow-2xl">
-            <img src={discussing} alt="Vidya Peeth students in discussion" className="aspect-[4/3] w-full object-cover" />
+            <img src={discussing} alt="Vidhyapeeth students in discussion" className="aspect-[4/3] w-full object-cover" />
           </div>
           {tags.map((tag) => (
             <div key={tag} className="rounded-lg bg-white p-3 text-center shadow-sm">

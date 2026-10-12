@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="flex flex-col gap-4 lg:col-span-6">
           <span className="flex w-fit items-center gap-1 rounded-xl bg-[#e7eeff] px-3 py-1 text-xs font-semibold text-brand">
             <span className="size-1.5 rounded-full bg-accent" />
-            CAREERS AT VIDYA PEETH
+            CAREERS AT VIDHYAPEETH
           </span>
           <h1 className="font-display text-4xl font-bold tracking-[-1px] text-brand sm:text-5xl lg:text-[56px] lg:leading-[1.1]">
             Shape Young Minds.
@@ -53,7 +53,7 @@ export default function Hero() {
 
         <div className="relative lg:col-span-6">
           <div className="relative mx-auto max-w-md overflow-hidden rounded-2xl shadow-xl">
-            <img src={heroMain} alt="Teachers mentoring students at Vidya Peeth Schools" className="h-80 w-full object-cover sm:h-[430px]" />
+            <img src={heroMain} alt="Teachers mentoring students at Vidhyapeeth Karimnagar" className="h-80 w-full object-cover sm:h-[430px]" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#001134]/70 to-transparent" />
             <div className="absolute inset-x-4 bottom-4 flex items-center gap-2 rounded-lg bg-white/90 p-2 backdrop-blur-sm">
               <span className="flex size-9 items-center justify-center rounded-sm bg-brand text-accent">📖</span>

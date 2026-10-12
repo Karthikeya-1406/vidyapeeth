@@ -20,14 +20,14 @@ export default function FormMapSplit() {
               </span>
             </div>
             <div className="relative h-[280px] overflow-hidden rounded-lg bg-[#dfe8ff]">
-              <img src={mapImage} alt="Vidya Peeth Schools campus map" className="size-full object-cover" />
+              <img src={mapImage} alt="Vidhyapeeth Karimnagar campus map" className="size-full object-cover" />
               <div className="absolute inset-0 flex items-center justify-center bg-brand/20">
                 <div className="flex max-w-[280px] items-center gap-2 rounded-lg bg-white/95 p-2 shadow-lg backdrop-blur-[6px]">
                   <span className="flex size-8 items-center justify-center rounded-full bg-[#ba1a1a] text-sm text-white">
                     📍
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-xs font-bold text-brand">Vidya Peeth Schools Campus</span>
+                    <span className="text-xs font-bold text-brand">Vidhyapeeth Karimnagar Campus</span>
                     <span className="text-xs text-slate-600">Back Side Lane District Court</span>
                   </div>
                 </div>

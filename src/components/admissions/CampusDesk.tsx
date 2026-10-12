@@ -64,10 +64,10 @@ export default function CampusDesk() {
           </div>
 
           <div className="relative min-h-[320px] lg:col-span-7">
-            <img src={mapImage} alt="Map to Vidya Peeth Schools, Karimnagar" className="size-full object-cover" />
+            <img src={mapImage} alt="Map to Vidhyapeeth Karimnagar" className="size-full object-cover" />
             <div className="absolute top-4 left-4 flex items-center gap-2 rounded-sm bg-white/95 px-3 py-2 shadow-md backdrop-blur">
               <span className="size-3 rounded-full bg-accent" />
-              <span className="font-sans text-xs font-bold text-brand">Vidya Peeth Schools, Karimnagar</span>
+              <span className="font-sans text-xs font-bold text-brand">Vidhyapeeth Karimnagar</span>
             </div>
           </div>
         </div>

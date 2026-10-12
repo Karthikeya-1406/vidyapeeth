@@ -20,7 +20,7 @@ export default function Hero() {
           </h1>
           <p className="max-w-xl text-lg text-[#d9e2ff]">
             In accordance with CBSE regulatory standards and statutory transparency directives (Affiliation No.
-            3630436), Vidya Peeth Schools presents certified institutional documentation for academic audits, legal
+            3630436), Vidhyapeeth Karimnagar presents certified institutional documentation for academic audits, legal
             mandates, and parental diligence.
           </p>
         </div>

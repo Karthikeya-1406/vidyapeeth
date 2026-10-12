@@ -7,7 +7,7 @@ export default function PerformancePanel() {
       <div className="mx-auto grid max-w-[1360px] gap-10 lg:grid-cols-12 lg:items-center">
         <div className="relative lg:col-span-5">
           <div className="relative overflow-hidden rounded-2xl shadow-xl">
-            <img src={campusImage} alt="Vidya Peeth Schools campus" className="h-80 w-full object-cover" />
+            <img src={campusImage} alt="Vidhyapeeth Karimnagar campus" className="h-80 w-full object-cover" />
             <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-lg bg-white/90 p-4 backdrop-blur-md">
               <div>
                 <p className="font-display text-lg font-bold text-brand">Statutory Campus Verification</p>
@@ -31,7 +31,7 @@ export default function PerformancePanel() {
             Last Three-Year Board Performance
           </h2>
           <p className="text-base text-slate-600">
-            Consistently achieving a 100% pass mandate with zero dropouts, Vidya Peeth Schools exemplifies
+            Consistently achieving a 100% pass mandate with zero dropouts, Vidhyapeeth Karimnagar exemplifies
             educational rigor and individualized holistic mentoring.
           </p>
 

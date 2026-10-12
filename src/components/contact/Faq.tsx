@@ -6,7 +6,7 @@ const faqs = [
     a: 'Our administrative office is open Monday through Saturday from 8:00 AM to 2:00 PM IST. We are closed on Sundays for visitors.',
   },
   {
-    q: 'Which curriculum framework is followed at Vidya Peeth Schools?',
+    q: 'Which curriculum framework is followed at Vidhyapeeth Karimnagar?',
     a: 'We follow the CBSE (Central Board of Secondary Education) competency-based curriculum framework, affiliated under No. 3630436.',
   },
   {

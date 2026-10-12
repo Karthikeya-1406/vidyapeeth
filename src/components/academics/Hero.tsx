@@ -53,10 +53,10 @@ export default function Hero() {
 
         <div className="relative mx-auto w-full max-w-md">
           <div className="overflow-hidden rounded-2xl border-4 border-white bg-[#d7e3fd] shadow-2xl">
-            <img src={heroMain} alt="Vidya Peeth students in an academic lab" className="aspect-square w-full object-cover" />
+            <img src={heroMain} alt="Vidhyapeeth students in an academic lab" className="aspect-square w-full object-cover" />
           </div>
           <div className="absolute -bottom-4 -left-4 w-48 overflow-hidden rounded-xl bg-white p-1.5 shadow-2xl">
-            <img src={heroSecondary} alt="Vidya Peeth students reading" className="aspect-[4/3] w-full rounded-lg object-cover" />
+            <img src={heroSecondary} alt="Vidhyapeeth students reading" className="aspect-[4/3] w-full rounded-lg object-cover" />
           </div>
           <div className="absolute -top-6 left-8 flex size-28 -rotate-6 flex-col items-center justify-center rounded-xl bg-[#ffdf92] p-2 text-center shadow-lg">
             <p className="font-display text-sm font-bold text-[#241a00]">Curiosity Today</p>

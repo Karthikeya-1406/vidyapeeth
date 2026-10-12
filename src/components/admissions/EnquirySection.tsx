@@ -3,7 +3,7 @@ import EnquiryForm from './EnquiryForm'
 
 export default function EnquirySection() {
   return (
-    <section className="bg-[#f0f3ff] px-6 py-16 sm:px-10 lg:px-20 lg:py-24">
+    <section id="enquiry" className="bg-[#f0f3ff] px-6 py-16 sm:px-10 lg:px-20 lg:py-24">
       <div className="mx-auto grid max-w-[1360px] gap-10 lg:grid-cols-12">
         <div className="flex flex-col gap-6 lg:col-span-5">
           <SectionHeading

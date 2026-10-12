@@ -191,7 +191,7 @@ export default function ContactForm() {
           onChange={(e) => update('consent', e.target.checked)}
         />
         <span className="text-xs text-slate-600">
-          I agree to receive academic updates and communications from Vidya Peeth Schools,
+          I agree to receive academic updates and communications from Vidhyapeeth Karimnagar,
           Karimnagar via SMS/Call/Email.
         </span>
       </label>

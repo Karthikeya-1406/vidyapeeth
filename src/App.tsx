@@ -14,6 +14,7 @@ import MandatoryDisclosure from './pages/MandatoryDisclosure'
 import Contact from './pages/Contact'
 import Enquiry from './pages/Enquiry'
 import ParentLogin from './pages/ParentLogin'
+import PolicyPlaceholder from './pages/PolicyPlaceholder'
 
 export default function App() {
   return (
@@ -32,6 +33,8 @@ export default function App() {
           <Route path="mandatory-disclosure" element={<MandatoryDisclosure />} />
           <Route path="contact" element={<Contact />} />
           <Route path="enquiry" element={<Enquiry />} />
+          <Route path="privacy-policy" element={<PolicyPlaceholder title="Privacy Policy" />} />
+          <Route path="terms-of-use" element={<PolicyPlaceholder title="Terms of Use" />} />
         </Route>
         <Route element={<MinimalLayout />}>
           <Route path="parent-login" element={<ParentLogin />} />

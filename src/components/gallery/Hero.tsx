@@ -64,7 +64,7 @@ export default function Hero() {
             ✨ Memories of 2023–24
           </span>
           <span className="absolute right-4 -bottom-6 z-20 rotate-6 rounded-md bg-[#d7e3fd] px-3 py-1 font-sans text-xs font-semibold text-brand shadow-sm">
-            #VidyaPeethPride
+            #VidhyapeethPride
           </span>
         </div>
       </div>

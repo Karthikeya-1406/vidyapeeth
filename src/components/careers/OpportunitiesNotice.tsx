@@ -19,7 +19,7 @@ export default function OpportunitiesNotice() {
             administration for active department roster status and upcoming academic session openings.
           </p>
           <p className="rounded-sm bg-white/5 p-2 text-xs text-[#b0c6ff]">
-            Vidya Peeth Schools follows fair merit-based selection. All appointments are formalized under CBSE
+            Vidhyapeeth Karimnagar follows fair merit-based selection. All appointments are formalized under CBSE
             statutory standards and State Education Board norms.
           </p>
         </div>

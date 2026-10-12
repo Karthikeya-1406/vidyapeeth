@@ -214,7 +214,7 @@ export default function EnquiryForm() {
           onChange={(e) => update('consent', e.target.checked)}
         />
         <span className="text-xs text-slate-600">
-          I authorize Vidya Peeth Schools to contact me via phone, WhatsApp, or email regarding
+          I authorize Vidhyapeeth Karimnagar to contact me via phone, WhatsApp, or email regarding
           admission procedures, fee schedules, and campus walkthrough appointments.
         </span>
       </label>

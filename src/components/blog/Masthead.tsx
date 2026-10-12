@@ -23,7 +23,7 @@ export default function Masthead() {
           </h1>
           <p className="max-w-xl pt-1 text-lg text-slate-600">
             Celebrating student excellence, scientific inquiry, athletic feats, and vibrant cultural milestones
-            across Vidya Peeth Schools, Karimnagar.
+            across Vidhyapeeth Karimnagar.
           </p>
         </div>
 

@@ -32,7 +32,7 @@ export default function CampusTour() {
               </span>
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold text-brand">
-                  Vidya Peeth Schools Campus
+                  Vidhyapeeth Karimnagar Campus
                 </span>
                 <span className="text-sm text-slate-600">
                   House No. 2-10-1282, Back Side Lane District Court, Jyothinagar, Karim Nagar,
@@ -68,7 +68,7 @@ export default function CampusTour() {
 
         <div className="flex flex-col gap-4 lg:col-span-6">
           <div className="relative overflow-hidden rounded-2xl bg-[#e7eeff] shadow-2xl">
-            <img src={mapImage} alt="Vidya Peeth Schools campus map" className="h-[320px] w-full object-cover" />
+            <img src={mapImage} alt="Vidhyapeeth Karimnagar campus map" className="h-[320px] w-full object-cover" />
             <div className="absolute inset-x-4 bottom-4 flex flex-col gap-3 rounded-lg bg-white/95 p-4 shadow-lg backdrop-blur-[6px] sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2">
                 <span className="flex size-10 items-center justify-center rounded-xl bg-accent">

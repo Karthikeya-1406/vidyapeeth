@@ -19,7 +19,7 @@ export default function Cta() {
             </h2>
             <p className="text-base leading-relaxed text-footer-muted">
               Give your child the balance of rigorous CBSE academics, national sports training,
-              entrepreneurship incubation, and rooted moral leadership at Vidya Peeth Schools,
+              entrepreneurship incubation, and rooted moral leadership at Vidhyapeeth Karimnagar,
               Karimnagar.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">

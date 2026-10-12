@@ -17,14 +17,14 @@ export default function InstitutionalStory() {
       <div className="mx-auto grid max-w-[1360px] items-center gap-12 lg:grid-cols-2">
         <div className="relative order-2 lg:order-1">
           <div className="overflow-hidden rounded-2xl shadow-xl">
-            <img src={storyCampus} alt="Vidya Peeth Schools campus and leadership" className="aspect-[4/3] w-full object-cover" />
+            <img src={storyCampus} alt="Vidhyapeeth Karimnagar campus and leadership" className="aspect-[4/3] w-full object-cover" />
           </div>
           <div className="relative -mt-10 ml-auto max-w-xs rounded-xl bg-brand p-6 shadow-2xl sm:absolute sm:right-6 sm:-bottom-6">
             <span className="font-display text-2xl text-accent">&ldquo;</span>
             <p className="font-display text-lg font-medium text-white">
               Good Education Builds Brighter Tomorrows.
             </p>
-            <p className="pt-1 text-xs font-semibold text-accent-light">&mdash; Vidya Peeth Founding Ideal</p>
+            <p className="pt-1 text-xs font-semibold text-accent-light">&mdash; Vidhyapeeth Founding Ideal</p>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ export default function InstitutionalStory() {
           </h2>
           <p className="text-base text-slate-600">
             Established in Karimnagar with a solemn mandate to bridge timeless pedagogical values
-            with contemporary inquiry, Vidya Peeth Schools represents an intellectual haven where
+            with contemporary inquiry, Vidhyapeeth Karimnagar represents an intellectual haven where
             children evolve from enthusiastic learners into responsible global leaders.
           </p>
           <p className="text-base text-slate-600">

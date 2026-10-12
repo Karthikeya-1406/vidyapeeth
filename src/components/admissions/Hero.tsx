@@ -50,7 +50,7 @@ export default function Hero() {
 
         <div className="relative mx-auto w-full max-w-md lg:order-2 lg:max-w-none">
           <div className="overflow-hidden rounded-lg border-4 border-white bg-white shadow-2xl">
-            <img src={heroImage} alt="Vidya Peeth campus" className="aspect-4/3 w-full object-cover" />
+            <img src={heroImage} alt="Vidhyapeeth campus" className="aspect-4/3 w-full object-cover" />
             <div className="flex items-center justify-between gap-3 bg-white/95 p-4 backdrop-blur">
               <div>
                 <p className="font-sans text-sm font-bold text-brand">Campus Admissions Open</p>
@@ -61,7 +61,7 @@ export default function Hero() {
               </span>
             </div>
           </div>
-          <div className="absolute -bottom-6 -left-6 hidden max-w-[220px] items-center gap-2 rounded-lg bg-brand p-4 text-white shadow-2xl sm:flex">
+          <div className="absolute -right-6 bottom-24 hidden max-w-[220px] items-center gap-2 rounded-lg bg-brand p-4 text-white shadow-2xl sm:flex">
             <span className="flex size-10 shrink-0 items-center justify-center rounded-sm bg-accent text-lg">
               &#128218;
             </span>

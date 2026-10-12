@@ -106,7 +106,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-[1360px] items-center gap-16 lg:grid-cols-12">
         <div className="flex flex-col items-start gap-6 lg:col-span-5 lg:w-[460px] lg:justify-self-end">
           <span className="font-display text-[11px] font-bold tracking-[2.4px] text-brand uppercase">
-            Welcome to Vidya Peeth Schools
+            Welcome to Vidhyapeeth Karimnagar
           </span>
           <h1 className="font-display text-5xl leading-[1.05] font-extrabold tracking-tight text-brand sm:text-6xl lg:text-[68px]">
             {slides[slideIndex].lines.map((_, i) => {
@@ -178,12 +178,12 @@ export default function Hero() {
 
           <Diamond
             src={heroStudent}
-            alt="Young Vidya Peeth student smiling in uniform"
+            alt="Young Vidhyapeeth student smiling in uniform"
             className="top-[8%] left-[18%] size-[45%] z-20"
           />
           <Diamond
             src={heroCampus}
-            alt="Vidya Peeth Schools campus exterior"
+            alt="Vidhyapeeth Karimnagar campus exterior"
             className="top-[30%] right-[2%] size-[42%] z-10"
           />
           <Diamond

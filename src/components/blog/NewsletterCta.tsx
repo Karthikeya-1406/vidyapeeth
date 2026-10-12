@@ -33,7 +33,7 @@ export default function NewsletterCta() {
 
             {subscribed ? (
               <p className="mt-2 flex items-center gap-2 rounded-sm bg-white/10 px-4 py-3 font-sans text-sm font-semibold text-white">
-                <span aria-hidden>✓</span> Thanks — you&rsquo;re subscribed to Vidya Peeth updates.
+                <span aria-hidden>✓</span> Thanks — you&rsquo;re subscribed to Vidhyapeeth updates.
               </p>
             ) : (
               <form onSubmit={handleSubmit} className="mt-2 flex w-full max-w-lg gap-1">

@@ -26,7 +26,7 @@ export default function Experience() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Campus Advantage"
-            heading="The Vidya Peeth Experience"
+            heading="The Vidhyapeeth Experience"
             description="A harmonious synthesis of scientific facilities, spacious sports grounds, and compassionate mentorship."
           />
           <span className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-brand">

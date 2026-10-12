@@ -12,7 +12,7 @@ export default function PedagogyInPractice() {
       <div className="mx-auto grid max-w-[1360px] items-center gap-12 lg:grid-cols-2">
         <div className="relative order-2 lg:order-1">
           <div className="overflow-hidden rounded-2xl shadow-xl">
-            <img src={pedagogyPhoto} alt="Teacher guiding students at Vidya Peeth" className="aspect-[4/3] w-full object-cover" />
+            <img src={pedagogyPhoto} alt="Teacher guiding students at Vidhyapeeth" className="aspect-[4/3] w-full object-cover" />
           </div>
           <span className="absolute top-4 left-4 rounded-sm bg-accent px-3 py-1.5 font-sans text-xs font-bold tracking-wide text-[#705600] uppercase">
             Pedagogy at Work

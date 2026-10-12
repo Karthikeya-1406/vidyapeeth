@@ -28,7 +28,7 @@ export default function Hero() {
             </h1>
             <p className="max-w-md text-lg leading-[29px] tracking-[-0.09px] text-slate-600">
               Take the first step toward your child&rsquo;s transformative educational journey at
-              Vidya Peeth Schools. Our dedicated academic counselors will guide you through
+              Vidhyapeeth Karimnagar. Our dedicated academic counselors will guide you through
               curricula, grade pathways, and personalized campus walkthroughs.
             </p>
           </div>

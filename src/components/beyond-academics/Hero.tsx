@@ -51,18 +51,19 @@ export default function Hero() {
           <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl border-4 border-white bg-[#d7e3fd] shadow-2xl sm:aspect-video">
             <img
               src={heroAthletics}
-              alt="Vidya Peeth students celebrating an athletics win"
+              alt="Vidhyapeeth students celebrating an athletics win"
               className="size-full object-cover"
             />
-            <div className="absolute inset-x-6 bottom-6 max-w-xs rounded-xl bg-brand/90 px-4 py-3 text-white backdrop-blur">
-              <p className="font-sans text-xs font-semibold tracking-[0.6px] text-accent-light uppercase">
-                Athletics &amp; Arts
-              </p>
-              <p className="font-display text-lg font-bold">Leadership in Play &amp; Thought</p>
-            </div>
           </div>
           <div className="absolute -bottom-8 -left-6 w-40 overflow-hidden rounded-xl border-4 border-white shadow-2xl sm:w-52">
-            <img src={heroArts} alt="Vidya Peeth student painting in art class" className="aspect-4/3 w-full object-cover" />
+            <img src={heroArts} alt="Vidhyapeeth student painting in art class" className="aspect-4/3 w-full object-cover" />
+          </div>
+          {/* Sits outside the photo cards so the overlapping inset photo can't cover it. */}
+          <div className="absolute right-7 bottom-7 left-7 z-10 ml-auto max-w-[min(20rem,58%)] rounded-xl bg-brand/90 px-4 py-3 text-white shadow-lg backdrop-blur">
+            <p className="font-sans text-xs font-semibold tracking-[0.6px] text-accent-light uppercase">
+              Athletics &amp; Arts
+            </p>
+            <p className="font-display text-lg font-bold">Leadership in Play &amp; Thought</p>
           </div>
           <div className="absolute top-4 right-4 hidden max-w-[180px] rounded-xl bg-white p-3 shadow-lg sm:block">
             <p className="font-display text-xs font-bold text-[#001134]">Holistic Growth</p>

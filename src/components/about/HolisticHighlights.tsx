@@ -45,7 +45,7 @@ export default function HolisticHighlights() {
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-xl">
-              <img src={classroomPhoto} alt="Collaborative classroom at Vidya Peeth" className="aspect-[4/3] w-full object-cover" />
+              <img src={classroomPhoto} alt="Collaborative classroom at Vidhyapeeth" className="aspect-[4/3] w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-4 flex items-center gap-2 rounded-lg bg-accent p-4 shadow-lg">
               <span className="text-2xl text-[#705600]">&#128101;</span>

@@ -26,7 +26,7 @@ export default function Academics() {
       <Reveal>
         <AdmissionsBanner
           eyebrow="Admissions Now Open • Academic Year 2024–25"
-          heading="Begin Their Academic Journey at Vidya Peeth"
+          heading="Begin Their Academic Journey at Vidhyapeeth"
           body="Give your child the lifelong advantage of conceptual clarity, balanced personal development, and intellectual leadership. Our counselors are ready to welcome your family."
           secondaryLabel="Talk to Academic Counselor"
           secondaryTo="/contact"

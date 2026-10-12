@@ -1,5 +1,6 @@
-const WHATSAPP_NUMBER = '919346002121'
-const DEFAULT_MESSAGE = 'Hello Vidya Peeth Schools, I would like to know more about admissions.'
+import { WHATSAPP_NUMBER } from '../../data/contact'
+
+const DEFAULT_MESSAGE = 'Hello Vidhyapeeth Karimnagar, I would like to know more about admissions.'
 
 export default function WhatsAppButton() {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`

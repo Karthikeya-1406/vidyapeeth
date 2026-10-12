@@ -20,7 +20,7 @@ const visionPillars = [
 
 export default function MissionVision() {
   return (
-    <section className="bg-[#f9f9ff] px-6 py-16 sm:px-10 lg:px-16 lg:py-24">
+    <section id="vision" className="bg-[#f9f9ff] px-6 py-16 sm:px-10 lg:px-16 lg:py-24">
       <div className="mx-auto flex max-w-[1360px] flex-col gap-10">
         <div className="flex flex-col items-start gap-2">
           <div className="flex items-center gap-2">
@@ -70,13 +70,13 @@ export default function MissionVision() {
           <div className="relative flex items-center justify-center py-6 lg:col-span-4">
             <div className="relative w-full max-w-[320px]">
               <div className="overflow-hidden rounded-3xl shadow-2xl">
-                <img src={heroPrimary} alt="Vidya Peeth students" className="aspect-[3/4] w-full object-cover" />
+                <img src={heroPrimary} alt="Vidhyapeeth students" className="aspect-[3/4] w-full object-cover" />
               </div>
               <div className="absolute -top-4 right-0 flex size-24 flex-col items-center justify-center rounded-xl border-2 border-white bg-[#ffea9f] p-2 text-center font-sans text-[9px] leading-tight font-bold tracking-[0.5px] text-[#241a00] uppercase shadow-lg">
                 Values &bull; Learning &bull; Opportunities &bull; Life Skills
               </div>
               <div className="absolute -right-2 bottom-6 size-28 overflow-hidden rounded-2xl border-4 border-white shadow-2xl">
-                <img src={heroSecondary} alt="Vidya Peeth student" className="size-full object-cover" />
+                <img src={heroSecondary} alt="Vidhyapeeth student" className="size-full object-cover" />
               </div>
               <div className="absolute -bottom-10 left-6 max-w-[160px] rounded-lg border border-slate-200 bg-white px-4 py-2 text-xs text-slate-600 shadow-lg">
                 Curiosity today. <span className="font-bold text-brand">Greater tomorrows.</span>

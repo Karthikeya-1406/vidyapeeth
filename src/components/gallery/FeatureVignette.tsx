@@ -11,7 +11,7 @@ export default function FeatureVignette() {
             Campus Spotlight
           </span>
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-brand sm:text-4xl lg:text-[44px]">
-            Life at Vidya Peeth in Focus
+            Life at Vidhyapeeth in Focus
           </h2>
           <p className="max-w-lg text-base text-slate-600">
             Beyond text and curriculum, what shapes the heartbeat of our school are the quiet pauses between
@@ -52,7 +52,7 @@ export default function FeatureVignette() {
         </div>
 
         <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
-          <img src={vignetteImage} alt="Vidya Peeth Chronicles video preview" className="aspect-[4/3] w-full object-cover" />
+          <img src={vignetteImage} alt="Vidhyapeeth Chronicles video preview" className="aspect-[4/3] w-full object-cover" />
           <button
             type="button"
             aria-label="Play campus chronicles video"
@@ -64,7 +64,7 @@ export default function FeatureVignette() {
             <div className="flex items-center gap-2">
               <span className="size-3 rounded-full bg-[#ba1a1a]" />
               <div>
-                <p className="font-display text-base font-bold text-brand">Vidya Peeth Chronicles: 2023–24</p>
+                <p className="font-display text-base font-bold text-brand">Vidhyapeeth Chronicles: 2023–24</p>
                 <p className="text-xs text-slate-500">Runtime 03:45 • Directed by School Media Club</p>
               </div>
             </div>

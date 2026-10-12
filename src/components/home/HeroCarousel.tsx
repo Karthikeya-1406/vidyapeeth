@@ -8,32 +8,69 @@ import stemLearning from '../../assets/images/home-hero/stem-learning.jpg'
 
 const AUTOPLAY_MS = 6000
 
-const slides = [
+// Below the sm breakpoint only the first slide is shown, without carousel controls.
+const MOBILE_QUERY = '(max-width: 639px)'
+
+type Cta = { label: string; to: string }
+
+// Only the first slide's headline is the page H1; the others render as H2.
+const slides: {
+  image: string
+  alt: string
+  eyebrow: string
+  heading: string
+  highlight: string
+  headingSize: string
+  body: string
+  primary: Cta
+  secondary?: Cta
+}[] = [
   {
     image: studentArrival,
-    alt: 'Vidya Peeth student smiling outside the school campus at sunrise',
-    eyebrow: 'Welcome to Vidya Peeth Schools',
-    heading: 'Stronger Values,',
-    highlight: 'Brighter Futures',
-    body: 'A CBSE-affiliated school in Karimnagar nurturing confident, compassionate learners from Nursery to Grade XII.',
-  },
-  {
-    image: campusLife,
-    alt: 'Students playing basketball, making music and painting on the Vidya Peeth campus',
-    eyebrow: 'Beyond Academics',
-    heading: 'Where Every Talent',
-    highlight: 'Finds Its Stage',
-    body: 'From the basketball court to the art studio, our students discover their passions through sports, music and the arts alongside academic excellence.',
+    alt: 'Student in school uniform outside the campus',
+    eyebrow: 'Vidhyapeeth Karimnagar · CBSE School in Karimnagar',
+    heading: 'Learning with Purpose.',
+    highlight: 'Growing with Confidence.',
+    headingSize: 'text-4xl sm:text-5xl lg:text-[64px]',
+    body: 'Children build strong academic foundations while growing in confidence, communication and character.',
+    primary: { label: 'Book a Campus Experience', to: '/enquiry' },
+    secondary: { label: 'Explore Vidhyapeeth', to: '/about' },
   },
   {
     image: stemLearning,
-    alt: 'Students building a robot together in a sunlit STEM classroom',
-    eyebrow: 'Future-Ready Learning',
-    heading: 'Ideas That',
-    highlight: 'Lead to Change',
-    body: 'Robotics, coding and hands-on STEM labs turn curiosity into innovation as students learn to explore, create, collaborate and solve.',
+    alt: 'Students working together on a hands-on classroom project',
+    eyebrow: 'Inquiry-Based Learning at Vidhyapeeth · Purposeful CBSE Education',
+    heading: 'Beyond Finding Answers.',
+    highlight: 'Learning to Ask Better Questions.',
+    headingSize: 'text-4xl sm:text-5xl lg:text-[56px]',
+    body: 'Students learn to observe, question and think independently—moving beyond memorisation to real understanding.',
+    primary: { label: 'Discover Our Learning Approach', to: '/academics' },
+  },
+  {
+    image: campusLife,
+    alt: 'Students taking part in sports, music and art activities',
+    eyebrow: 'Vidhyapeeth Karimnagar · Learning Beyond the Classroom',
+    heading: 'Understand. Think. Apply.',
+    highlight: 'Express. Create. Lead.',
+    headingSize: 'text-4xl sm:text-5xl lg:text-[64px]',
+    body: 'Through academics, projects and real-world experiences, students grow capable, curious and confident.',
+    primary: { label: 'Book a School Visit', to: '/enquiry' },
+    secondary: { label: 'Explore Student Life', to: '/beyond-academics' },
   },
 ]
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
+
+  useEffect(() => {
+    const query = window.matchMedia(MOBILE_QUERY)
+    const onChange = () => setIsMobile(query.matches)
+    query.addEventListener('change', onChange)
+    return () => query.removeEventListener('change', onChange)
+  }, [])
+
+  return isMobile
+}
 
 function ArrowButton({ direction, onClick }: { direction: 'prev' | 'next'; onClick: () => void }) {
   return (
@@ -62,9 +99,13 @@ function ArrowButton({ direction, onClick }: { direction: 'prev' | 'next'; onCli
 }
 
 export default function HeroCarousel() {
-  const [index, setIndex] = useState(0)
+  const [current, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const touchStartX = useRef<number | null>(null)
+  const isMobile = useIsMobile()
+  const index = isMobile ? 0 : current
+  const slide = slides[index]
+  const Heading = index === 0 ? 'h1' : 'h2'
 
   const goTo = useCallback((next: number) => {
     setIndex((next + slides.length) % slides.length)
@@ -74,21 +115,22 @@ export default function HeroCarousel() {
 
   // Autoplay; restarts whenever the slide changes so manual navigation gets a full interval.
   useEffect(() => {
-    if (paused) return
+    if (paused || isMobile) return
     const timer = window.setTimeout(next, AUTOPLAY_MS)
     return () => window.clearTimeout(timer)
-  }, [index, paused, next])
+  }, [index, paused, isMobile, next])
 
   return (
     <section
-      aria-roledescription="carousel"
-      aria-label="Vidya Peeth highlights"
+      aria-roledescription={isMobile ? undefined : 'carousel'}
+      aria-label="Vidhyapeeth highlights"
       className="relative isolate h-[600px] overflow-hidden bg-brand sm:h-[640px] lg:h-[min(760px,calc(100vh-80px))] lg:min-h-[620px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
       onKeyDown={(event) => {
+        if (isMobile) return
         if (event.key === 'ArrowLeft') prev()
         if (event.key === 'ArrowRight') next()
       }}
@@ -96,15 +138,15 @@ export default function HeroCarousel() {
         touchStartX.current = event.touches[0].clientX
       }}
       onTouchEnd={(event) => {
-        if (touchStartX.current === null) return
+        if (touchStartX.current === null || isMobile) return
         const delta = event.changedTouches[0].clientX - touchStartX.current
         if (Math.abs(delta) > 50) (delta > 0 ? prev : next)()
         touchStartX.current = null
       }}
     >
-      {slides.map((slide, i) => (
+      {slides.map((item, i) => (
         <div
-          key={slide.image}
+          key={item.image}
           role="group"
           aria-roledescription="slide"
           aria-label={`${i + 1} of ${slides.length}`}
@@ -114,8 +156,8 @@ export default function HeroCarousel() {
           }`}
         >
           <img
-            src={slide.image}
-            alt={slide.alt}
+            src={item.image}
+            alt={item.alt}
             fetchPriority={i === 0 ? 'high' : 'auto'}
             className={`size-full object-cover object-center transition-transform duration-[7000ms] ease-out motion-reduce:transition-none ${
               i === index ? 'scale-105' : 'scale-100'
@@ -128,39 +170,47 @@ export default function HeroCarousel() {
       <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/55 to-brand/0 sm:via-brand/40" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/3 bg-gradient-to-t from-brand/70 to-transparent" />
 
-      <div className="relative z-20 mx-auto flex h-full max-w-[1360px] items-center px-16 pt-16 sm:px-24 lg:px-28">
-        <div key={index} className="flex max-w-[600px] flex-col items-start gap-5 animate-[hero-text-in_700ms_cubic-bezier(0.16,1,0.3,1)]">
-          <span className="flex items-center gap-2 font-display text-xs font-extrabold tracking-[2.4px] text-accent uppercase">
-            <span className="h-[2px] w-8 rounded-full bg-accent" />
-            {slides[index].eyebrow}
+      <div className="relative z-20 mx-auto flex h-full max-w-[1360px] items-center px-6 pt-16 sm:px-24 lg:px-28">
+        <div key={index} className="flex max-w-[640px] flex-col items-start gap-5 animate-[hero-text-in_700ms_cubic-bezier(0.16,1,0.3,1)]">
+          <span className="flex items-start gap-2 font-display text-xs leading-relaxed font-extrabold tracking-[2.4px] text-accent uppercase">
+            <span className="mt-2 h-[2px] w-8 shrink-0 rounded-full bg-accent" />
+            {slide.eyebrow}
           </span>
-          <h1 className="font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-white sm:text-5xl lg:text-[64px]">
-            {slides[index].heading}
+          <Heading
+            className={`font-display leading-[1.08] font-extrabold tracking-tight text-white ${slide.headingSize}`}
+          >
+            {slide.heading}
             <br />
-            <span className="text-accent">{slides[index].highlight}</span>
-          </h1>
-          <p className="max-w-[520px] text-base leading-relaxed text-slate-200 sm:text-lg">{slides[index].body}</p>
+            <span className="text-accent">{slide.highlight}</span>
+          </Heading>
+          <p className="max-w-[560px] text-base leading-relaxed text-slate-200 sm:text-lg">{slide.body}</p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Button as={NavLink} to="/admissions" icon={<img src={arrowRight} alt="" className="size-4" />}>
-              Explore Admissions
+            <Button as={NavLink} to={slide.primary.to} icon={<img src={arrowRight} alt="" className="size-4" />}>
+              {slide.primary.label}
             </Button>
-            <NavLink
-              to="/enquiry"
-              className="inline-flex items-center gap-2 rounded-full border border-white/40 px-5 py-3 font-display text-xs font-bold tracking-[0.6px] text-white uppercase backdrop-blur-sm transition-colors hover:bg-white/10"
-            >
-              Book a Campus Visit
-            </NavLink>
+            {slide.secondary && (
+              <NavLink
+                to={slide.secondary.to}
+                className="hidden items-center gap-2 rounded-full border border-white/40 px-5 py-3 font-display text-xs font-bold tracking-[0.6px] text-white uppercase backdrop-blur-sm transition-colors hover:bg-white/10 sm:inline-flex"
+              >
+                {slide.secondary.label}
+              </NavLink>
+            )}
           </div>
         </div>
       </div>
 
-      <ArrowButton direction="prev" onClick={prev} />
-      <ArrowButton direction="next" onClick={next} />
+      {!isMobile && (
+        <>
+          <ArrowButton direction="prev" onClick={prev} />
+          <ArrowButton direction="next" onClick={next} />
+        </>
+      )}
 
-      <div className="absolute inset-x-0 bottom-6 z-20 flex justify-center gap-2 sm:bottom-8">
-        {slides.map((slide, i) => (
+      <div className={`absolute inset-x-0 bottom-6 z-20 justify-center gap-2 sm:bottom-8 ${isMobile ? 'hidden' : 'flex'}`}>
+        {slides.map((item, i) => (
           <button
-            key={slide.image}
+            key={item.image}
             type="button"
             onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}`}

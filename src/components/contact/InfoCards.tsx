@@ -8,7 +8,7 @@ const cards = [
     title: 'Karimnagar Center',
     body: 'House No. 2-10-1282, Back Side Lane District Court, Jyothinagar, Karim Nagar, Telangana – 505001.',
     linkLabel: 'View Campus Map',
-    href: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Vidya Peeth Schools, Jyothinagar, Karimnagar, Telangana 505001'),
+    href: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Vidhyapeeth, Jyothinagar, Karimnagar, Telangana 505001'),
   },
   {
     icon: '📞',

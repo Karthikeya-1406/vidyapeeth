@@ -1,26 +1,50 @@
 import type { CSSProperties } from 'react'
+import { NavLink } from 'react-router-dom'
+import Button from '../ui/Button'
 import { useInView } from '../../hooks/useInView'
+import arrowRight from '../../assets/icons/arrow-right.svg'
 import studentsPhoto from '../../assets/images/why-choose-students.png'
 
+// Each priority links to the page that shows it in practice.
 const leftPoints = [
-  { title: 'Comprehensive Curriculum', body: 'CBSE standard balanced with life skills' },
-  { title: 'Individual Attention', body: 'Low student-to-mentor classroom ratio' },
-  { title: 'Experienced Teachers', body: 'Passionate, regularly trained educators' },
+  {
+    title: 'Strong academic foundations',
+    body: 'Learning that values understanding and steady progress.',
+    to: '/academics',
+    linkLabel: 'See our academic approach',
+  },
+  {
+    title: 'Confident communication',
+    body: 'Opportunities to ask questions, share ideas and express understanding.',
+    to: '/academics',
+    linkLabel: 'See inquiry-based learning',
+  },
 ]
 
 const rightPoints = [
-  { title: 'Modern Learning Spaces', body: 'Science, math and digital facilities' },
-  { title: 'Holistic Character', body: 'Moral values, discipline, empathy' },
-  { title: 'Safe & Supportive', body: 'Child safety, hygiene & transport care' },
+  {
+    title: 'Meaningful experiences',
+    body: 'Participation that connects learning with creativity and school life.',
+    to: '/beyond-academics',
+    linkLabel: 'See student life',
+  },
+  {
+    title: 'Character development',
+    body: 'Encouragement to act with responsibility, respect and purpose.',
+    to: '/about',
+    linkLabel: 'See our values',
+  },
 ]
 
 // Vertical start offset per row so cards fan out from the circle's centre.
-const rowOffsets = ['55%', '0%', '-55%']
+const rowOffsets = ['30%', '-30%']
 
 function PointCard({
   num,
   title,
   body,
+  to,
+  linkLabel,
   side,
   index,
   visible,
@@ -28,6 +52,8 @@ function PointCard({
   num: string
   title: string
   body: string
+  to: string
+  linkLabel: string
   side: 'left' | 'right'
   index: number
   visible: boolean
@@ -39,9 +65,10 @@ function PointCard({
   } as CSSProperties
 
   return (
-    <div
+    <NavLink
+      to={to}
       style={style}
-      className={`flex items-center gap-4 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-all duration-900 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none motion-reduce:transform-none ${
+      className={`group flex items-start gap-4 rounded-2xl border border-amber-100 bg-white p-5 shadow-sm transition-all duration-900 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-accent hover:shadow-md motion-reduce:transition-none motion-reduce:transform-none ${
         visible
           ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
           : 'translate-y-6 scale-50 opacity-0 lg:translate-x-(--dx) lg:translate-y-(--dy)'
@@ -51,10 +78,13 @@ function PointCard({
         {num}
       </span>
       <div>
-        <h4 className="font-display text-sm font-bold text-brand">{title}</h4>
-        <p className="text-xs text-slate-500">{body}</p>
+        <h3 className="font-display text-base font-bold text-brand">{title}</h3>
+        <p className="mt-1 text-sm text-slate-600">{body}</p>
+        <span className="mt-2 inline-block font-display text-[11px] font-bold tracking-[0.6px] text-accent-dark uppercase group-hover:underline">
+          {linkLabel} &rarr;
+        </span>
       </div>
-    </div>
+    </NavLink>
   )
 }
 
@@ -66,15 +96,11 @@ export default function WhyChooseUs() {
       <div className="mx-auto flex max-w-[1360px] flex-col items-center gap-16">
         <div className="max-w-2xl text-center">
           <span className="font-display text-xs font-extrabold tracking-[2.4px] text-accent-dark uppercase">
-            Why Choose Vidya Peeth?
+            A learning approach built around your child&rsquo;s growth
           </span>
           <h2 className="mt-2 font-display text-4xl font-extrabold tracking-tight text-brand sm:text-5xl">
-            A Well-Rounded Learning Experience
+            Why Choose Vidhyapeeth
           </h2>
-          <p className="mt-3 text-base text-slate-600">
-            Where every child&rsquo;s unique spark is recognized, protected, and encouraged to
-            illuminate the world.
-          </p>
         </div>
 
         <div className="relative w-full overflow-hidden rounded-3xl border border-amber-200/60 bg-amber-50/60 p-6 sm:p-10 lg:p-12">
@@ -99,7 +125,11 @@ export default function WhyChooseUs() {
                 into the surrounding padding and gaps without shifting the cards. */}
             <div className="relative z-10 order-first flex justify-center lg:order-none lg:col-span-4 lg:h-72">
               <div className="size-64 overflow-hidden rounded-full border-8 border-white shadow-[0_25px_50px_-12px_rgba(10,37,86,0.18)] sm:size-80 lg:absolute lg:top-1/2 lg:left-1/2 lg:size-72 lg:-translate-x-1/2 lg:-translate-y-1/2 xl:size-[360px] 2xl:size-[368px]">
-                <img src={studentsPhoto} alt="Vidya Peeth students together" className="size-full object-cover" />
+                <img
+                  src={studentsPhoto}
+                  alt="Students discussing a globe and atlases around a library table"
+                  className="size-full object-cover"
+                />
               </div>
             </div>
 
@@ -107,7 +137,7 @@ export default function WhyChooseUs() {
               {rightPoints.map((point, i) => (
                 <PointCard
                   key={point.title}
-                  num={String(i + 4).padStart(2, '0')}
+                  num={String(i + leftPoints.length + 1).padStart(2, '0')}
                   side="right"
                   index={i}
                   visible={inView}
@@ -117,6 +147,10 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </div>
+
+        <Button as={NavLink} to="/enquiry" icon={<img src={arrowRight} alt="" className="size-4" />}>
+          Book a Campus Experience
+        </Button>
       </div>
     </section>
   )

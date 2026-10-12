@@ -1,7 +1,6 @@
 import Reveal from '../components/ui/Reveal'
 // import Hero from '../components/home/Hero'
 import HeroCarousel from '../components/home/HeroCarousel'
-import FeatureStrip from '../components/home/FeatureStrip'
 import AboutScrapbook from '../components/home/AboutScrapbook'
 import Academics from '../components/home/Academics'
 import CampusInfrastructure from '../components/home/CampusInfrastructure'
@@ -17,9 +16,6 @@ export default function Home() {
     <>
       {/* <Hero /> */}
       <HeroCarousel />
-      <Reveal>
-        <FeatureStrip />
-      </Reveal>
       <Reveal>
         <AboutScrapbook />
       </Reveal>

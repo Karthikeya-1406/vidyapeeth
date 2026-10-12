@@ -8,10 +8,10 @@ export default function MinimalLayout() {
       <header className="w-full bg-white shadow-[0_1px_1px_0_rgba(0,0,0,0.05)]">
         <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-4 sm:px-8">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Vidhya Peeth High School logo" className="size-14 shrink-0 object-contain" />
+            <img src={logo} alt="Vidhyapeeth Karimnagar" className="size-14 shrink-0 object-contain" />
             <span className="hidden flex-col items-start leading-none sm:flex">
               <span className="font-display text-[20px] font-semibold tracking-[-0.5px] text-brand uppercase">
-                Vidya Peeth Schools
+                Vidhyapeeth Karimnagar
               </span>
               <span className="pt-1 font-sans text-[12px] font-semibold tracking-[1.2px] text-accent-dark uppercase">
                 CBSE Affiliation No. 3630436
@@ -40,7 +40,7 @@ export default function MinimalLayout() {
           <div className="flex items-center gap-3">
             <img src={logo} alt="" className="size-12 shrink-0 object-contain" />
             <div className="flex flex-col leading-none">
-              <span className="font-display text-lg font-bold text-white">Vidya Peeth Schools</span>
+              <span className="font-display text-lg font-bold text-white">Vidhyapeeth Karimnagar</span>
               <span className="pt-1 font-sans text-xs text-footer-muted">Karimnagar, Telangana</span>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function MinimalLayout() {
               CBSE Affiliation No. 3630436
             </span>
             <span className="hidden opacity-40 sm:inline">•</span>
-            <span>© {new Date().getFullYear()} Vidya Peeth Schools. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Vidhyapeeth Karimnagar. All rights reserved.</span>
           </div>
         </div>
       </footer>

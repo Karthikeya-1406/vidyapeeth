@@ -1,6 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
-import logoMark from '../../assets/icons/logo-mark.svg'
-import footerLogoMark from '../../assets/icons/footer-logo-mark.svg'
+import logo from '../../assets/images/logo.png'
 import PageTransition from '../PageTransition'
 
 export default function MinimalLayout() {
@@ -9,9 +8,7 @@ export default function MinimalLayout() {
       <header className="w-full bg-white shadow-[0_1px_1px_0_rgba(0,0,0,0.05)]">
         <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-4 sm:px-8">
           <Link to="/" className="flex items-center gap-3">
-            <span className="flex size-10 shrink-0 items-center justify-center rounded bg-brand shadow-[0_1px_1px_0_rgba(0,0,0,0.05)]">
-              <img src={logoMark} alt="" className="h-[15px] w-[19px]" />
-            </span>
+            <img src={logo} alt="Vidhya Peeth High School logo" className="size-14 shrink-0 object-contain" />
             <span className="hidden flex-col items-start leading-none sm:flex">
               <span className="font-display text-[20px] font-semibold tracking-[-0.5px] text-brand uppercase">
                 Vidya Peeth Schools
@@ -41,9 +38,7 @@ export default function MinimalLayout() {
       <footer className="w-full bg-brand py-8">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <div className="flex items-center gap-3">
-            <span className="flex size-8 shrink-0 items-center justify-center rounded-sm bg-white/10">
-              <img src={footerLogoMark} alt="" className="h-[15px] w-[19px]" />
-            </span>
+            <img src={logo} alt="" className="size-12 shrink-0 object-contain" />
             <div className="flex flex-col leading-none">
               <span className="font-display text-lg font-bold text-white">Vidya Peeth Schools</span>
               <span className="pt-1 font-sans text-xs text-footer-muted">Karimnagar, Telangana</span>

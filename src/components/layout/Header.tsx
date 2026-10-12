@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from '../ui/Button'
-import logoMark from '../../assets/icons/logo-mark.svg'
+import logo from '../../assets/images/logo.png'
 import arrowRight from '../../assets/icons/arrow-right.svg'
 
 const navItems = [
   { label: 'Home', to: '/' },
-  { label: 'About Us', to: '/about' },
+  { label: 'About Vidhyapeeth', to: '/about' },
   { label: 'Academics', to: '/academics' },
   { label: 'Beyond Academics', to: '/beyond-academics' },
-  { label: 'Admission', to: '/admissions' },
+  { label: 'Admissions', to: '/admissions' },
   { label: 'Gallery', to: '/gallery' },
-  { label: 'Mandatory Disclosure', to: '/mandatory-disclosure' },
 ]
 
 function NavLinkItem({ label, to }: { label: string; to: string }) {
@@ -41,15 +40,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-[4px] shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
       <div className="mx-auto flex h-20 max-w-[1360px] items-center justify-between px-6">
-        <NavLink to="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
-          <span className="flex size-11 items-center justify-center">
-            <img src={logoMark} alt="Vidya Peeth Schools" className="size-full" />
+        <NavLink to="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
+          <span className="flex size-14 shrink-0 items-center justify-center">
+            <img src={logo} alt="Vidhya Peeth High School logo" className="size-full object-contain" />
           </span>
-          <span className="flex flex-col items-start">
-            <span className="font-display text-[20px] font-extrabold tracking-[-0.5px] text-brand">
+          <span className="flex flex-col items-start gap-1">
+            <span className="font-display text-[20px] leading-none font-extrabold tracking-[-0.5px] text-brand">
               VIDYA PEETH
             </span>
-            <span className="pt-0.5 font-display text-[11px] font-semibold tracking-[2.75px] text-brand">
+            <span className="pl-1 font-display text-[11px] leading-none font-semibold tracking-[2.75px] text-brand">
               SCHOOLS
             </span>
           </span>

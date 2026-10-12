@@ -1,5 +1,5 @@
 import heroImage from '../../assets/images/contact/hero.jpg'
-import logoMark from '../../assets/icons/logo-mark.svg'
+import logo from '../../assets/images/logo.png'
 
 export default function Hero() {
   return (
@@ -37,7 +37,7 @@ export default function Hero() {
             </a>
           </div>
           <p className="flex items-center gap-2 pt-2 text-xs text-footer-muted">
-            <img src={logoMark} alt="" className="size-4 opacity-80" />
+            <img src={logo} alt="" className="size-6 shrink-0 object-contain" />
             CBSE Affiliated Senior Secondary Institution &bull; Affiliation No. 3630436 &bull;
             Karimnagar
           </p>

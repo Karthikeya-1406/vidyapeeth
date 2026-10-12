@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+import { useInView } from '../../hooks/useInView'
 import studentsPhoto from '../../assets/images/why-choose-students.png'
 
 const leftPoints = [
@@ -12,9 +14,39 @@ const rightPoints = [
   { title: 'Safe & Supportive', body: 'Child safety, hygiene & transport care' },
 ]
 
-function PointCard({ num, title, body }: { num: string; title: string; body: string }) {
+// Vertical start offset per row so cards fan out from the circle's centre.
+const rowOffsets = ['55%', '0%', '-55%']
+
+function PointCard({
+  num,
+  title,
+  body,
+  side,
+  index,
+  visible,
+}: {
+  num: string
+  title: string
+  body: string
+  side: 'left' | 'right'
+  index: number
+  visible: boolean
+}) {
+  const style = {
+    '--dx': side === 'left' ? '70%' : '-70%',
+    '--dy': rowOffsets[index],
+    transitionDelay: visible ? `${200 + index * 160 + (side === 'right' ? 80 : 0)}ms` : '0ms',
+  } as CSSProperties
+
   return (
-    <div className="flex items-center gap-4 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm">
+    <div
+      style={style}
+      className={`flex items-center gap-4 rounded-2xl border border-amber-100 bg-white p-4 shadow-sm transition-all duration-900 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none motion-reduce:transform-none ${
+        visible
+          ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
+          : 'translate-y-6 scale-50 opacity-0 lg:translate-x-(--dx) lg:translate-y-(--dy)'
+      }`}
+    >
       <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 font-display text-base font-bold text-brand">
         {num}
       </span>
@@ -27,6 +59,8 @@ function PointCard({ num, title, body }: { num: string; title: string; body: str
 }
 
 export default function WhyChooseUs() {
+  const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.35 })
+
   return (
     <section className="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
       <div className="mx-auto flex max-w-[1360px] flex-col items-center gap-16">
@@ -47,22 +81,38 @@ export default function WhyChooseUs() {
           <span className="pointer-events-none absolute top-4 right-0 rotate-12 font-script text-4xl whitespace-nowrap text-amber-200 select-none sm:text-6xl">
             Curiosity &bull; Collaboration &bull; Confidence
           </span>
-          <div className="relative grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div ref={ref} className="relative grid gap-8 lg:grid-cols-12 lg:items-center">
             <div className="flex flex-col gap-4 lg:col-span-4">
               {leftPoints.map((point, i) => (
-                <PointCard key={point.title} num={String(i + 1).padStart(2, '0')} {...point} />
+                <PointCard
+                  key={point.title}
+                  num={String(i + 1).padStart(2, '0')}
+                  side="left"
+                  index={i}
+                  visible={inView}
+                  {...point}
+                />
               ))}
             </div>
 
-            <div className="order-first flex justify-center lg:order-none lg:col-span-4">
-              <div className="size-56 overflow-hidden rounded-full border-8 border-white shadow-[0_25px_50px_-12px_rgba(10,37,86,0.18)] sm:size-72">
+            {/* On desktop the wrapper keeps the original 18rem footprint so the circle can grow
+                into the surrounding padding and gaps without shifting the cards. */}
+            <div className="relative z-10 order-first flex justify-center lg:order-none lg:col-span-4 lg:h-72">
+              <div className="size-64 overflow-hidden rounded-full border-8 border-white shadow-[0_25px_50px_-12px_rgba(10,37,86,0.18)] sm:size-80 lg:absolute lg:top-1/2 lg:left-1/2 lg:size-72 lg:-translate-x-1/2 lg:-translate-y-1/2 xl:size-[360px] 2xl:size-[368px]">
                 <img src={studentsPhoto} alt="Vidya Peeth students together" className="size-full object-cover" />
               </div>
             </div>
 
             <div className="flex flex-col gap-4 lg:col-span-4">
               {rightPoints.map((point, i) => (
-                <PointCard key={point.title} num={String(i + 4).padStart(2, '0')} {...point} />
+                <PointCard
+                  key={point.title}
+                  num={String(i + 4).padStart(2, '0')}
+                  side="right"
+                  index={i}
+                  visible={inView}
+                  {...point}
+                />
               ))}
             </div>
           </div>
